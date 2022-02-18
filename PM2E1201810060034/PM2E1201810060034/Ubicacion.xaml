@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E1201810060034.Locaciones">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+
+            <Frame BackgroundColor="#000C66" Padding="5" CornerRadius="0">
+                <Label Text="Lista de Localizaciones" HorizontalTextAlignment="Center" TextColor="White" FontSize="40"/>
+            </Frame>
+            
+            <ListView x:Name="ListaUbicaciones" ItemTapped="listviewSelect">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding descripcion}" />
+                    </DataTemplate 
+                     >
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <Button x:Name="btnBorrar" TextColor="White" Text="Borrar" Clicked="btnBorrar_Clicked" BackgroundColor="Blue"/>
+
+            <Button x:Name="btnMapas" TextColor="White" Text="Ver Mapa" Clicked="btnMapas_Clicked" BackgroundColor="#000C66"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

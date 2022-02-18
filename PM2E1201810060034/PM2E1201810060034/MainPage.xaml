@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E1201810060034.MainPage">
+
+
+
+    <StackLayout BackgroundColor="White">
+        <Frame BackgroundColor="#000C66" Padding="24" CornerRadius="0">
+            <Label Text="Examen I Parcial" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label FontSize="15" >
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Latitud: "/>
+                        <Span x:Name="lbllatitud"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label FontSize="15" >
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Longitud: "/>
+                        <Span x:Name="lbllongitud" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+
+
+        <Label Text="Describa la ubicacion: " HorizontalTextAlignment="left" TextColor="Blue" FontSize="20"/>
+        <Entry  PlaceholderColor="White" TextColor="Blue" x:Name="txtDescripcion"/>
+
+        <Label Text="Imagen" />
+
+        <Image Source="https://www.uth.hn/wp-content/uploads/2019/12/logo-1.png" x:Name="imagen" HorizontalOptions="Center" HeightRequest="70" WidthRequest="60" />
+
+        <Button TextColor="White" Text="Tomar Foto" x:Name="btncargarimg" Clicked="btncargarimg_Clicked" BackgroundColor="#000C66" />
+
+
+        <Button x:Name="btnGuardar" TextColor="White" Text="Guardar" Clicked="btnGuardar_Clicked" BackgroundColor="Blue"/>
+        <Button  x:Name="btnLista"  TextColor="White" Text="Ver Lista" Clicked="btnLista_Clicked" BackgroundColor="#000C66"/>
+        
+    </StackLayout>
+
+</ContentPage>
